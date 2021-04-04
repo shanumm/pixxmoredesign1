@@ -1,6 +1,7 @@
 import React from "react";
 import Cross from "./Cross";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -9,6 +10,7 @@ import "./App.css";
 export default function Team() {
   return (
     <motion.div
+      className="team-content"
       exit={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
@@ -16,19 +18,62 @@ export default function Team() {
       <Link to="/home">
         <Cross />
       </Link>
-      <h1 className="team-content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima eum
-        repellat modi, nam at necessitatibus enim ratione adipisci quaerat
-        dignissimos assumenda fuga commodi corporis autem culpa dolorum ducimus,
-        tenetur aliquam. Ipsum exercitationem corporis natus obcaecati ratione
-        incidunt sint, sequi fuga voluptatem libero in doloremque, sapiente, hic
-        ab quo laborum magnam vel. Harum quibusdam et ipsa nobis. Velit
-        similique molestiae eum, quas, delectus reiciendis magni pariatur
-        ducimus perspiciatis nemo impedit commodi nisi cumque porro mollitia!
-        Blanditiis earum facere ut repellendus, aliquid quod iusto labore culpa.
-        Reprehenderit modi beatae culpa consequuntur voluptatibus eos blanditiis
-        vitae rerum nobis nulla! Inventore dolorem aliquam aspernatur?
-      </h1>
+      <div className="team">
+        <div className="team-header">
+          <h1>Our Team</h1>
+        </div>
+        <div className="team-about">
+          <div className="team-about1-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about1">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div className="team-about2-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about2">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div className="team-about3-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about3">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div className="team-about4-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about4">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div className="team-about5-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about5">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div className="team-about6-image">
+            <img src="https://cdn.pixabay.com/photo/2020/03/18/19/17/easter-4945288_960_720.jpg" />
+            <div className="team-about6">
+              <h1>Name of the person</h1>
+              <i>Designation</i>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      < Footer />
     </motion.div>
   );
 }

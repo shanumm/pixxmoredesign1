@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cross from "./Cross";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import ScrollReveal from "scrollreveal";
 
 import { AnimatePresence, motion } from "framer-motion";
 import "./App.css";
 
 export default function Client() {
+  useEffect(() => {
+    ScrollReveal().reveal(".client-image", { delay: 500 });
+    ScrollReveal().reveal(".client-info-content", {
+      delay: 800,
+    });
+  });
+
   return (
     <motion.div
+      className="client-content"
       exit={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       initial={{ opacity: 0 }}
@@ -15,19 +25,73 @@ export default function Client() {
       <Link to="/home">
         <Cross />
       </Link>
-      <h1 className="client-content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima eum
-        repellat modi, nam at necessitatibus enim ratione adipisci quaerat
-        dignissimos assumenda fuga commodi corporis autem culpa dolorum ducimus,
-        tenetur aliquam. Ipsum exercitationem corporis natus obcaecati ratione
-        incidunt sint, sequi fuga voluptatem libero in doloremque, sapiente, hic
-        ab quo laborum magnam vel. Harum quibusdam et ipsa nobis. Velit
-        similique molestiae eum, quas, delectus reiciendis magni pariatur
-        ducimus perspiciatis nemo impedit commodi nisi cumque porro mollitia!
-        Blanditiis earum facere ut repellendus, aliquid quod iusto labore culpa.
-        Reprehenderit modi beatae culpa consequuntur voluptatibus eos blanditiis
-        vitae rerum nobis nulla! Inventore dolorem aliquam aspernatur?
-      </h1>
+      <div className="client-landing">
+        <div className="client-landing-content">
+          <h1>Our Clients</h1>
+          <h3>
+            Your satisfaction is our feedback <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos
+            labore ex cumque sunt beatae?
+          </h3>
+        </div>
+        <div className="client-landing-clientsInfo">
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+          <div>
+            <div className="client-image">
+              <div className="client-image-img"></div>
+            </div>
+            <div className="client-info-content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              consequuntur nulla eveniet, perferendis dolores necessitatibus.
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </motion.div>
   );
 }
