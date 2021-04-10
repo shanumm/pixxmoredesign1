@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Cross from "./Cross";
 import { Link } from "react-router-dom";
-import Footer from "./Footer"
+import Footer from "./Footer";
 import simpleParallax from "simple-parallax-js";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -31,15 +31,12 @@ export default function Career() {
           <div className="career-content">
             <div>
               <div className="career-content-heading">
-                Lorem <span>ipsum</span>
+                pixXmo <span>Ship</span>
               </div>
               <div className="radial-line"></div>
             </div>
             <div className="career-content-subheading">
-              <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
-                ea.
-              </div>
+              <div>Work to become, not to acquire!</div>
             </div>
           </div>
           <div className="career-scroll">

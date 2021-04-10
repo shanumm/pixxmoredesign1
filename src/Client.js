@@ -28,6 +28,10 @@ export default function Client() {
       <div className="client-landing">
         <div className="client-landing-content">
           <h1>Our Clients</h1>
+          <i style={{marginLeft:"2rem",fontWeight:"200"}}>
+            Coming together is beginning, keeping together is progress, working
+            together is a success!
+          </i>
           <h3>
             We at pixXmo ascertain that your demands are always met. We ensure
             that we always listen to your views, wishes, wants, and needs all

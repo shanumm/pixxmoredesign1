@@ -200,6 +200,8 @@ export default function Home() {
 
         pointer.style.top = yAxis + "px";
         pointer.style.left = xAxis + "px";
+        root.style.setProperty("--x", e.clientX + "px");
+        root.style.setProperty("--y", e.clientY + "px");
       });
     }
     // logo hover animation
@@ -269,7 +271,7 @@ export default function Home() {
               <div className="img"></div>
             </div>
             <div className="page1-content">
-              <Blob name="1" />
+              {/* <Blob name="1" /> */}
               <header className="logo">
                 <div className="Pixxmo-image">
                   <img src={Pixxmo} />
@@ -277,8 +279,15 @@ export default function Home() {
               </header>
               <div className="heading">
                 <div>
-                  <h3>Design is thinking, we call it <br/> pixXmo </h3>
-                 
+                  <h3>
+                    <span>Design</span>
+                    <span>is</span>
+                    <span>thinking</span>
+                    <span>we</span>
+                    <span>call</span>
+                    <span>it</span>
+                    <span>pixxmo</span>
+                  </h3>
                 </div>
               </div>
               <Nav />
@@ -288,7 +297,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="2" />
+            {/* <Blob name="2" /> */}
             <div className="text">
               <h3>Be great in act, as you have been in thought</h3>
             </div>
@@ -298,7 +307,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="3" />
+            {/* <Blob name="3" /> */}
             <div className="text">
               {" "}
               <h3>You must take your chance</h3>
@@ -309,7 +318,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="4" />
+            {/* <Blob name="4" /> */}
             <div className="text">
               {" "}
               <h3>What is past is prologue</h3>
@@ -320,7 +329,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="5" />
+            {/* <Blob name="5" /> */}
             <div className="text">
               {" "}
               <h3>How many goodly creatures are there here!</h3>
@@ -331,7 +340,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="6" />
+            {/* <Blob name="6" /> */}
             <div className="text">
               {" "}
               <h3>Make haste, the better foot before</h3>
@@ -342,7 +351,7 @@ export default function Home() {
             <div className="image">
               <div className="img"></div>
             </div>
-            <Blob name="7" />
+            {/* <Blob name="7" /> */}
             <div className="text">
               {" "}
               <h3>All the world’s a stage</h3>

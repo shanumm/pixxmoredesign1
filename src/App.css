@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins";
+  list-style: none;
 }
 
 *::-webkit-scrollbar {
@@ -19,7 +20,6 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: black;
   position: absolute;
   z-index: 1;
   top: 0;
@@ -30,7 +30,7 @@
   color: white;
   pointer-events: none;
   font-size: 0.8rem;
-  transform: translate(-50%, -50%);
+  transform: translate(-15%, -15%);
   transition: height 0.2s linear, width 0.2s linear, transform 0.5s linear,
     background 0.5s linear, color 0.5s linear;
 }
@@ -84,16 +84,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.2;
+  clip-path: circle(125px at var(--x) var(--y));
+  background: url("../src/Images/Mars01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .image .img {
   position: relative;
   transition: all 0.1s linear;
   width: 100%;
   height: 100%;
-  background: url("https://unknown.digital/img/particles-1024w.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 /* page one  */
@@ -111,15 +112,22 @@ body {
 .page3 h3,
 .page4 h3,
 .page5 h3 {
-  color: white;
+  color: black;
 }
 .page1-content h3,
 .page2 h3,
 .page3 h3,
 .page4 h3,
 .page5 h3 {
-  font-weight:100;
-  font-size: 2.5rem !important;
+  font-weight: 200;
+  font-size: 3rem !important;
+}
+
+.heading div h3 {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  text-transform: capitalize;
 }
 
 .logo {
@@ -416,7 +424,7 @@ body {
   width: 80%;
 }
 .text-third ul {
-  margin-left: 6rem;
+  margin-left: 3rem;
   margin-top: 1rem;
 }
 .text-fourth {
@@ -568,7 +576,7 @@ body {
     font-size: 1rem;
     margin-bottom: 2rem;
   }
-  .team-about-upper p{
+  .team-about-upper p {
     width: 80%;
   }
 }

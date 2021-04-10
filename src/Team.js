@@ -38,6 +38,9 @@ export default function Team() {
         </div>
         <div className="team-about-upper">
           <p>
+            <i style={{ marginLeft: "1rem", fontWeight: "200" }}>
+              Birds of the same feather flock together <br />
+            </i>
             Throughout the years, pixXmo grew to become one whole family, all of
             different prowess but simultaneously contributing to deliver quality
             products promptly. Various teams come together to research, write,
