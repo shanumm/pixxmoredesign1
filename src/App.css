@@ -98,10 +98,28 @@ body {
 
 /* page one  */
 
-.page1-content {
+.page1-content,
+.page2 {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.page1-content h3,
+.page1-content p,
+.page2 h3,
+.page3 h3,
+.page4 h3,
+.page5 h3 {
+  color: white;
+}
+.page1-content h3,
+.page2 h3,
+.page3 h3,
+.page4 h3,
+.page5 h3 {
+  font-weight:100;
+  font-size: 2.5rem !important;
 }
 
 .logo {
@@ -147,13 +165,13 @@ body {
   width: 80%;
 }
 .heading h3 {
-  font-size: 3rem;
-  width: 20%;
+  font-size: 2.5rem;
+  width: 25%;
   text-align: center;
 }
 
 .heading p {
-  font-weight: 700;
+  font-weight: 200;
 }
 .text {
   display: flex;
@@ -170,7 +188,6 @@ body {
   width: 20%;
   margin-left: 2rem;
   position: relative;
-
 }
 
 .page-position-nav {
@@ -178,7 +195,7 @@ body {
   top: 50%;
   right: 2%;
   width: 5%;
-  height: 30%;
+  height: 45%;
   transform: translate(-2%, -50%);
   display: flex;
   flex-direction: column;
@@ -314,7 +331,7 @@ body {
 
 .client-landing-clientsInfo > div > .client-image,
 .client-landing-clientsInfo > div > .client-info-content {
-  flex: 1;
+  flex: 1 1 20rem;
 }
 
 .client-image-img {
@@ -344,7 +361,7 @@ body {
 
 .services-main,
 .service-content {
-  height: 280vh;
+  min-height: 280vh;
   width: 100%;
   background: rgb(14, 13, 13);
 }
@@ -358,9 +375,9 @@ body {
   height: 30vh;
 }
 .text-two {
-  height: 70vh;
-  width: 53%;
-  font-size: 1.5rem;
+  min-height: 70vh;
+  width: 70%;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   margin-left: 1.3rem;
@@ -368,10 +385,21 @@ body {
 .text-third {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
+  min-height: 100vh;
   width: 80%;
   margin: auto;
+  grid-gap: 2rem 1rem;
 }
+
+@media (max-width: 900px) {
+  .text-two {
+    width: 95%;
+  }
+  .text-third {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
 .text-third h2 {
   font-size: 2rem;
   font-weight: 900;
@@ -497,17 +525,7 @@ body {
 .team {
   color: #333;
   background: black;
-}
-
-.team-about {
-  min-height: 200vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 3;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+  min-height: 100vh;
 }
 
 .team-header {
@@ -515,121 +533,85 @@ body {
   font-family: serif;
   font-size: 1.9rem;
   color: #bbb;
+  padding-bottom: 1rem;
 }
-.team-about h1 {
-  text-align: center;
-  font-family: serif;
-  font-size: 1.6rem;
+.team-header h1 {
+  padding-top: 1.6rem;
+  width: 40%;
+  margin-left: auto;
 }
-.team-about1-image,
-.team-about2-image,
-.team-about3-image,
-.team-about4-image,
-.team-about5-image,
-.team-about6-image {
-  width: 33%;
-  min-width: 250px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 4% 1% 4%;
-  display: inline-block;
+.team-about-upper {
+  height: 86vh;
+  width: 100%;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.team-about-upper p {
+  width: 55%;
+  margin-left: 2.5rem;
+}
+.team-about-lower {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4rem;
+}
+
+@media (max-width: 900px) {
+  .team-header {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .team-about-upper p{
+    width: 80%;
+  }
+}
+
+.team-about1,
+.team-about2,
+.team-about3,
+.team-about4,
+.team-about5,
+.team-about6,
+.team-about7,
+.team-about8,
+.team-about9,
+.team-about10,
+.team-about11,
+.team-about12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 .team-about1-image img,
 .team-about2-image img,
 .team-about3-image img,
 .team-about4-image img,
 .team-about5-image img,
-.team-about6-image img {
-  width: 100%;
-  min-height: 100%;
-  transition: all 0.9s;
+.team-about6-image img,
+.team-about7-image img,
+.team-about8-image img,
+.team-about9-image img,
+.team-about10-image img,
+.team-about11-image img,
+.team-about12-image img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
-.team-about1-image:hover img {
-  transform: scale(1.2, 1.2);
+.team-about-lower h1 {
+  font-size: 1.3rem;
 }
-.team-about2-image:hover img {
-  transform: scale(1.2, 1.2);
-}
-.team-about3-image:hover img {
-  transform: scale(1.2, 1.2);
-}
-.team-about4-image:hover img {
-  transform: scale(1.2, 1.2);
-}
-.team-about5-image:hover img {
-  transform: scale(1.2, 1.2);
-}
-.team-about6-image:hover img {
-  transform: scale(1.2, 1.2);
-}
-.team-about1,
-.team-about2,
-.team-about3,
-.team-about4,
-.team-about5,
-.team-about6 {
-  position: absolute;
-  bottom: 5%;
-  background: #fff;
-  text-align: center;
-  width: 90%;
-  height: 80px;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 10px 5%;
-  box-sizing: border-box;
-  opacity: 0.8;
-  transition: all 0.4s;
-}
-
-.team-about1-image:hover .team-about1,
-.team-about2-image:hover .team-about2,
-.team-about3-image:hover .team-about3,
-.team-about4-image:hover .team-about4,
-.team-about5-image:hover .team-about5,
-.team-about6-image:hover .team-about6 {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  opacity: 0.9;
-  padding: 90px 10%;
-}
-
-.team-about1 h1,
-.team-about2 h1,
-.team-about3 h1,
-.team-about4 h1,
-.team-about5 h1,
-.team-about6 h1 {
-  margin: 0 0 5px 0;
-  transition: color 0.4s;
-}
-
-.team-about p {
-  opacity: 0;
-  text-align: justify;
-  transition: all 0.2s;
-}
-
-.team-about1-image:hover .team-about1 p,
-.team-about2-image:hover .team-about2 p,
-.team-about3-image:hover .team-about3 p,
-.team-about4-image:hover .team-about4 p,
-.team-about5-image:hover .team-about5 p,
-.team-about6-image:hover .team-about6 p {
-  opacity: 1;
-}
-
-.team-about1-image:hover h1,
-.team-about2-image:hover h1,
-.team-about3-image:hover h1,
-.team-about4-image:hover h1,
-.team-about5-image:hover h1,
-.team-about6-image:hover h1 {
-  color: #38c;
+.team-about-lower h2 {
+  font-size: 1.3rem;
 }
 
 /* career  */
@@ -910,4 +892,129 @@ body {
 }
 .career-page3 > div:nth-of-type(2) p:nth-of-type(1) {
   margin-left: 50%;
+}
+
+/* portfolio  */
+
+.portfolio-page {
+  overflow: hidden;
+}
+
+.portfolio-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  transition: background 0.8s ease-in-out;
+}
+
+.portfolio-page1,
+.portfolio-page2,
+.portfolio-page3,
+.portfolio-page4,
+.portfolio-page5 {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.p-p1-header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  justify-content: flex-end;
+}
+
+.p-p1-content {
+  height: 90vh;
+  display: flex;
+}
+
+.p-p1-content-left,
+.p-p1-content-right {
+  flex: 1;
+}
+
+.p-p1-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-p1-content-left h1,
+.p-p1-content-left h3,
+.p-p1-content-left h4 {
+  width: 80%;
+  margin-left: auto;
+}
+
+.p-p1-content-left h1 {
+  font-size: 4rem;
+  color: #fe3448;
+}
+
+.p-p1-content-left h3 {
+  font-weight: 400;
+  padding: 1rem 0;
+}
+.p-p1-content-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-p1-content-right-img {
+  width: 25rem;
+  height: 25rem;
+  background: url("https://cdn.pixabay.com/photo/2021/02/22/08/41/crocus-6039312_960_720.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: perspective(600px) rotateY(-20deg) rotateX(10deg);
+  background-attachment: fixed;
+  transition: height 0.8s linear, width 0.8s linear;
+  animation: image-translate 2s ease-in-out alternate infinite;
+  animation: image-translate 2s ease-in-out alternate infinite;
+  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  transform-style: preserve-3d;
+}
+
+.extra {
+  transition: height 0.8s linear, width 0.8s linear;
+  animation: size-change 1.2s ease-in-out forwards,
+    image-translate 2s ease-in-out alternate infinite;
+}
+
+@keyframes size-change {
+  0%,
+  100% {
+    width: 25rem;
+    height: 25rem;
+  }
+  50% {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@keyframes image-translate {
+  0% {
+    transform: perspective(600px) rotateY(-20deg) rotateX(10deg) translateY(10%);
+  }
+  100% {
+    transform: perspective(600px) rotateY(-20deg) rotateX(10deg)
+      translateY(-10%);
+  }
+}
+
+/* blob  */
+
+.blob-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* opacity: .4; */
+}
+canvas {
+  transform: scale(1.4);
+  display: block;
 }

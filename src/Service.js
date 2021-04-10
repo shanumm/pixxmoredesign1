@@ -13,15 +13,13 @@ import "./App.css";
 export default function Service() {
   useEffect(() => {
     // ScrollReveal library
-    ScrollReveal({ reset: true }).reveal(".text-third", { delay: 500 });
+    ScrollReveal({ reset: true }).reveal(".text-third", { delay: 300 });
     ScrollReveal({ reset: true }).reveal(".text-third > div ul", {
-      delay: 800,
+      delay: 600,
     });
-    ScrollReveal({ reset: true }).reveal(".text-fourth", { delay: 500 });
+    ScrollReveal({ reset: true }).reveal(".text-fourth", { delay: 300 });
 
     //animejs library
-
-    
 
     // Scrollbar.init(document.querySelector("#my-scrollbar"));
 
@@ -48,10 +46,16 @@ export default function Service() {
         </div>
         <div className="text-two">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ab
-            corrupti dolor dignissimos sequi praesentium ea, non harum
-            voluptatum laudantium. Sit rerum impedit reprehenderit eveniet eius
-            eos blanditiis consectetur architecto!
+            We at pixXmo come together to create, devise, design and animate
+            visuals and content on a varied range of platforms including
+            Website, Application: Android/IOS, Promotional Videos, Product
+            Photography, Graphics: Logos, Poster, Banner, 3D Modelling,
+            Advertisement, Flyers, Infographics, Invitations, Brochures, Resume,
+            Menu, Presentations, and a lot more. This is the one stop solution
+            for all your digital creative needs. While others work on long hauls
+            of tiring, back-breaking design, development, and marketing tools,
+            take your chances with us. Your product deserves it and with our
+            digital expertise we got it all covered for you.
           </p>
         </div>
         <div className="text-third">

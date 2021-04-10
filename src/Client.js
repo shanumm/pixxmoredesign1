@@ -29,9 +29,10 @@ export default function Client() {
         <div className="client-landing-content">
           <h1>Our Clients</h1>
           <h3>
-            Your satisfaction is our feedback <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eos
-            labore ex cumque sunt beatae?
+            We at pixXmo ascertain that your demands are always met. We ensure
+            that we always listen to your views, wishes, wants, and needs all
+            the while creating an end product which not only aligns to your
+            perspective but also allures to your vision.
           </h3>
         </div>
         <div className="client-landing-clientsInfo">
