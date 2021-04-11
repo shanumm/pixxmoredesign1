@@ -4,7 +4,6 @@ import Pixxmo from "./TBG.png";
 import { Link, Redirect, useHistory } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import Nav from "./Nav";
-import Blob from "./Blob";
 export default function Home() {
   const History = useHistory();
   useEffect(() => {
@@ -244,12 +243,12 @@ export default function Home() {
     }
 
     window.addEventListener("mousedown", () => {
-      pointer.style.transform = "translate(-50%, -50%) scale(1.5)";
+      pointer.style.transform = "translate(-30%, -30%) scale(1.5)";
       container.style.width = "100%";
       container.style.height = "100vh";
     });
     window.addEventListener("mouseup", () => {
-      pointer.style.transform = " translate(-50%, -50%) scale(1)";
+      pointer.style.transform = " translate(-15%, -15%) scale(1)";
       container.style.width = "95%";
       container.style.height = "90vh";
     });

@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins";
+  scroll-behavior: smooth;
   list-style: none;
 }
 
@@ -20,6 +21,7 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  /* background-color: black; */
   position: absolute;
   z-index: 1;
   top: 0;
@@ -30,9 +32,9 @@
   color: white;
   pointer-events: none;
   font-size: 0.8rem;
-  transform: translate(-15%, -15%);
   transition: height 0.2s linear, width 0.2s linear, transform 0.5s linear,
     background 0.5s linear, color 0.5s linear;
+  transform: translate(-15%, -15%);
 }
 
 .small-pointer {
@@ -84,11 +86,31 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: circle(125px at var(--x) var(--y));
+  clip-path: circle(10% at var(--x) var(--y));
   background: url("../src/Images/Mars01.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  transition: clip-path 0.2s linear;
+}
+
+.page2:active .image,
+.page3:active .image,
+.page4:active .image,
+.page5:active .image,
+.page6:active .image,
+.page7:active .image {
+  clip-path: circle(100% at var(--x) var(--y));
+}
+
+.page2:active .text h3,
+.page3:active .text h3,
+.page4:active .text h3,
+.page5:active .text h3,
+.page6:active .text h3,
+.page7:active .text h3 {
+  color: white;
+  transition: color 0.5s linear;
 }
 .image .img {
   position: relative;
@@ -1014,15 +1036,3 @@ body {
 }
 
 /* blob  */
-
-.blob-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* opacity: .4; */
-}
-canvas {
-  transform: scale(1.4);
-  display: block;
-}
